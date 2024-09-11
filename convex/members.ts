@@ -154,7 +154,6 @@ export const update = mutation({
 export const remove = mutation({
   args: {
     id: v.id("members"),
-    role: v.union(v.literal("admin"), v.literal("member")),
   },
   handler: async (ctx, args) => {
     const userId = await auth.getUserId(ctx);
